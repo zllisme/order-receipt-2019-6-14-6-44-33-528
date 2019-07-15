@@ -26,7 +26,7 @@ public class OrderReceipt {
         // print headers
         createHeaderReceipt();
         // prints lineItems
-        createMiddleItemsReceipt();
+        createMiddleReceiptAndCalTail();
 
         // prints the state tax
         createTailReceipt();
@@ -34,7 +34,7 @@ public class OrderReceipt {
         return receipt.toString();
     }
 
-    private void createMiddleItemsReceipt() {
+    private void createMiddleReceiptAndCalTail() {
         for (LineItem lineItem : order.getLineItems()) {
             createLineItemReceipt(lineItem);
 
